@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f184a2e2b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/5.png" class="logo">
+            <ul>
+                <li><a href='#Header'>Home</a></li>
+                <li><a href='#About'>About</a></li>
+                <li><a href='#Contact'>Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Rajeswarii</span><br>Janavikulam from Chennai</h1>
+        </div>
+    </div>
+</div>
+<!--------about-------->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="About-col-1">
+                <img src="Images/3.jpg">
+            </div>
+            <div class="About-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> <br><br>"I'm Rajeswarii Janavikulam. I am from Chennai. I'm doing my Batchelors in Computer Application<br> in S.A. College of Arts & Science BSc.Data Science in IIT Madras. I completed my 12th from RMK<br>Senior Secondary School and 10th from Chinmaya Vidyalaya." </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Programming Language</span><br><br>•C++<br><br>•Java<br><br>•Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2020 - 2023</span><br>BCA at S.A. College of Arts & Science</li>
+                        <li><span>From 2021</span><br>BSc.Data Science at IIT Madras</li>
+                        <li><span>2020</span><br>12th at RMK Senior Secondary School</li>
+                        <li><span>2018</span><br>10th at Chinmaya Vidyalaya</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------Contact----------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-centre">
+                <h1 class="sub-titile">Contact Me</h1>
+                <p><br><i class="fa-solid fa-envelope"></i> rajeswarii.janavikulam@gmail.com<br></p>
+                <div class="social-icons">
+                    <p><br></p>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
